@@ -15,7 +15,7 @@ Require Import PeanoNat.
 Require Import strong_inductionT.
 Require Import GLS_exch.
 Require Import GLS_wkn.
-Require Import remove_list.
+Require Import GLS_PSGLS_remove_list.
 Require Import GLS_PSGLS_dec.
 Require Import Lia.
 
