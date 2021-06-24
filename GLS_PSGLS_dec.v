@@ -354,8 +354,3 @@ intro concl. destruct (dec_init_rules concl).
           assumption.
         - inversion X. subst. apply f2. exists (XBoxed_list BΓ ++ [Box A], [A]). assumption. }
 Qed.
-
-
-
-
-
