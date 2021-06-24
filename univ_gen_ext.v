@@ -9,7 +9,6 @@ Require Import genT.
 Require Import gen_tacs.
 Require Import gen_seq.
 Require Import List_lemmasT.
-Require Import gen_ext.
 Require Import FunctionalExtensionality.
 Require Import Lia.
 
@@ -516,12 +515,15 @@ induction l1.
 Qed.
 
 Ltac solve_gen_ext :=
-  repeat (apply gen_ext_appL' || apply gen_ext_appR' ||
-    apply gen_ext_nil_any || apply gen_ext_refl ||
-    apply gen_ext_sameL || apply gen_ext_appL ||
-    apply gen_ext_cons || apply univ_gen_ext_extra).
+  repeat (apply gen_ext_appR ||
+      apply gen_ext_nil_any || apply gen_ext_refl ||
+      apply gen_ext_sameL || apply gen_ext_appL ||
+      apply univ_gen_ext_cons || apply univ_gen_ext_extra).
 
-
+Ltac solve_univ_gen_ext :=
+  repeat (apply univ_gen_ext_appR || apply univ_gen_ext_refl ||
+      apply univ_gen_ext_appL || apply univ_gen_ext_cons ||
+      apply univ_gen_ext_extra).
 
 
 (* univ_gen_ext simulates rest_gen_ext. The latter allows to restrict
