@@ -33,9 +33,6 @@ Inductive list_exch_R : relationT (rel (list (MPropF V))) :=
   | list_exch_RI Γ Δ0 Δ1 Δ2 Δ3 Δ4 : list_exch_R
         (Γ, Δ0 ++ Δ1 ++ Δ2 ++ Δ3 ++ Δ4) (Γ, Δ0 ++ Δ3 ++ Δ2 ++ Δ1 ++ Δ4).
 
-(* Why not use Permutation for exchange? It is a bit complex, but in the end it is
-what I want. I guess that the definition just above with lists does the job. *)
-
 (* Some lemmas about In and exchange. *)
 
 Lemma InT_list_exch_R : forall l0 l1 l2,
