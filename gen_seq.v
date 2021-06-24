@@ -10,7 +10,7 @@ From Coq Require Import ssreflect.
 Add LoadPath "../tense-lns". *)
 Require Import gen genT ddT gen_tacs.
 Require Import gstep.
-Require Import List_lemmasT gen_tacs swappedT existsT.
+Require Import List_lemmasT swappedT existsT.
 Require Import Coq.Program.Basics.
 
 Inductive rlsmap U W (f : U -> W) (rls : rlsT U) : rlsT W :=
