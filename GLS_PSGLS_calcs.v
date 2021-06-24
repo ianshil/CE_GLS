@@ -20,7 +20,7 @@ Set Implicit Arguments.
 
 Global Parameter V : Set.
 
-Hypothesis eq_dec_propvar : forall x y : V, {x = y}+{x <> y}.
+Parameter eq_dec_propvar : forall x y : V, {x = y}+{x <> y}.
 
 Notation "x :: l" := (cons x l)
                      (at level 60, right associativity).
@@ -359,7 +359,3 @@ induction A.
   pose (derI (rules:=GLS_rules (V:=V)) (prems:=fun _ : rel (list (MPropF V)) => False) (ps:=[(XBoxed_list (top_boxes l0) ++ A :: Box A :: XBoxed_list (top_boxes l1) ++ [Box A], [A])])
   (l0 ++ Box A :: l1, l2 ++ Box A :: l3) X d0). assumption.
 Qed.
-
-
-
-
