@@ -737,9 +737,9 @@ Proof.
   assumption.
   firstorder.
   subst.
-  eexists (Γ1 ++ [B]), (Σ2). split. split. firstorder.
-  (* assert (Hyp: t :: Σ2 = [t] ++ Σ2). simpl. reflexivity.
-  rewrite Hyp. apply app_assoc.*)
+  eexists (Γ1 ++ [B]), (Σ2). split. split.
+  assert (Hyp: t :: Σ2 = [t] ++ Σ2). simpl. reflexivity.
+  rewrite Hyp. apply app_assoc.
   intros C HC. apply InT_appL. assumption.
   firstorder.
   subst.
@@ -958,7 +958,7 @@ Proof.
   induction w; intros *; intros H; simpl in *.
   subst. exists y. right. tauto.
   apply cons_eq_appT2 in H. destruct H as [[H1 H2]| [l [? H3]]]; subst.
-  exists (a :: w). left. simpl. firstorder. (* intro. inversion H. *)
+  exists (a :: w). left. simpl. split. split ; try auto. intro. inversion H.
   eapply IHw in H3. destruct H3 as [l2 [[H3 H4] | [H3 H4]]]; subst.
   exists l2. sD. subst. left. tauto.
   exists l2. right. tauto.
