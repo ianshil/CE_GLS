@@ -68,20 +68,6 @@ apply dersrec_nil.
 intros A s Γ0 Γ1 Δ0 Δ1 size MHD E D0 D1. inversion D0. inversion H.
 inversion D1. inversion H0.
 
-(*
-(* Decide whether s is an initial sequent or not. *)
-destruct (dec_init_rules s).
-(* If s is an initial sequent. *)
-repeat destruct s0.
-apply IdP in i.
-pose (derI (rules:=GLS_rules (V:=V)) (prems:=fun _ : rel (list (MPropF V)) => False) (ps:=[]) s i DersNilF).
-assumption.
-inversion i. subst. apply Id_all_form.
-apply BotL in b.
-pose (derI (rules:=GLS_rules (V:=V)) (prems:=fun _ : rel (list (MPropF V)) => False) (ps:=[]) s b DersNilF).
-assumption. *)
-
-(* If s is not an initial sequent. *)
 inversion X ; subst.
 
 (* Left rule is IdP *)
