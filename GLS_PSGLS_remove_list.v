@@ -11,7 +11,7 @@ Delimit Scope My_scope with M.
 Open Scope My_scope.
 Set Implicit Arguments.
 
-Hypothesis eq_dec_propvar : forall x y : V, {x = y}+{x <> y}.
+Parameter eq_dec_propvar : forall x y : V, {x = y}+{x <> y}.
 
 Lemma In_dec : forall l (a : MPropF V) , (In a l) + ((In a l) -> False).
 Proof.
