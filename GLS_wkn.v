@@ -21,7 +21,7 @@ Delimit Scope My_scope with M.
 Open Scope My_scope.
 Set Implicit Arguments.
 
-(* Finally, we define the relations which take care of the notion of weakening. *)
+(* We define the relations which take care of the notion of weakening. *)
 
 Inductive wkn_L (fml : MPropF V) : relationT (rel (list (MPropF V))) :=
   | wkn_LI Γ0 Γ1 Δ : wkn_L fml
