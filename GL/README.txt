@@ -14,7 +14,7 @@ In GL, each file has a specific role:
             GLS_PSGLS_calcs.v  ==>  defines the formal language, as well as the GLS and PSGLS calculi
       GLS_PSGLS_remove_list.v  ==>  defines the operation remove_list on list of formulae
         GLS_PSGLS_list_lems.v  ==>  states useful lemmas about list of formulae
-              GLS_PSGLS_dec.v  ==>  shows that the appicability of the rules of GLS and PSGLS is decidable
+              GLS_PSGLS_dec.v  ==>  shows that the applicability of the rules of GLS and PSGLS is decidable
                    GLS_exch.v  ==>  shows that GLS admits exchange
                     GLS_wkn.v  ==>  shows that GLS admits weakening
           GLS_inv_ImpR_ImpL.v  ==>  shows that the rules ImpR and ImpL are invertible in GLS
