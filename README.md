@@ -11,6 +11,6 @@ The GL directory contains encodings of a sequent calculus for provability logic 
 
 ----
 
-To use, see GL/README.txt.
+To use, see GL/README.md.
 
 Tested on Coq 8.11.2 (June, 2020)
