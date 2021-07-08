@@ -1,7 +1,7 @@
+Add LoadPath "../general".
+
 Require Import List.
 Export ListNotations.
-
-Add LoadPath "../general".
 
 Require Import genT gen.
 Require Import ddT.
