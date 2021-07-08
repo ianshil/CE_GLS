@@ -1,6 +1,8 @@
 Require Import List.
 Export ListNotations.
 
+Add LoadPath "../general".
+
 Require Import genT.
 Require Import gen_tacs.
 Require Import List_lemmasT.
