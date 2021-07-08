@@ -2,6 +2,8 @@ Require Import GLS_PSGLS_calcs.
 Require Import List.
 Export ListNotations.
 
+Add LoadPath "../general".
+
 Require Import genT gen.
 Require Import ddT.
 Require Import gen_tacs.
